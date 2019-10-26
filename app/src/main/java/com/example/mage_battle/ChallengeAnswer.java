@@ -17,6 +17,8 @@ public class ChallengeAnswer extends AppCompatActivity {
     private TextView UserAnswerTop;
     private TextView CorrectAnswerTop;
     private String CurSub;
+    private Double total_cnt = 0.0;
+    private Double max_cnt = 0.0;
 
 
     @Override
@@ -34,6 +36,8 @@ public class ChallengeAnswer extends AppCompatActivity {
         final String CorrectAnswer = intent.getStringExtra("correctAnswer");
         final String Question = intent.getStringExtra("Question");
         final String current_subject = intent.getStringExtra("subj");
+        total_cnt = intent.getDoubleExtra("total_diff", 0.0);
+        max_cnt = intent.getDoubleExtra("max_diff", 0.0);
         CurSub = current_subject;
 
         QuestionTop.setText(Question);
@@ -68,6 +72,8 @@ public class ChallengeAnswer extends AppCompatActivity {
     public void nextQuestion() {
         Intent intent = new Intent(this, ChallengeQuestion.class);
         intent.putExtra("resent", CurSub);
+        intent.putExtra("total_diff", total_cnt);
+        intent.putExtra("max_diff", max_cnt);
         startActivity(intent);
     }
 }

@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
     private Button button_to_practise;
     private Button button_to_challenge;
     private Button button_to_duel;
+    private Button button_to_profile;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +44,15 @@ public class MainActivity extends AppCompatActivity {
                 openDuel();
             }
         });
+        button_to_profile = (Button) findViewById(R.id.button_profile);
+        button_to_profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openProfile();
+            }
+        });
+
+
     }
 
     public void openPractise() {
@@ -55,6 +65,10 @@ public class MainActivity extends AppCompatActivity {
     }
     public void openDuel() {
         Intent intent = new Intent(this, Duel.class);
+        startActivity(intent);
+    }
+    public void openProfile() {
+        Intent intent = new Intent(this, Profile.class);
         startActivity(intent);
     }
 }
