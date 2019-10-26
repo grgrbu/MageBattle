@@ -46,7 +46,6 @@ public class ChallengeQuestion extends AppCompatActivity {
         final String subject = intent.getStringExtra("resent");
         cnt_person = intent.getDoubleExtra("total_diff", 0.0);
         max_person = intent.getDoubleExtra("max_diff", 0.0);
-        CurSub = subject;
 
         System.out.println(subject);
 
@@ -96,6 +95,7 @@ public class ChallengeQuestion extends AppCompatActivity {
                             fourth.setText(response.getString("answer3"));
                             CorrectAnswer = response.getInt("correct");
                             difficulty = response.getDouble("difficulty");
+                            CurSub = response.getString("subject");
                             if (CorrectAnswer == 0) {
                                 CorrectAnswerText = first.getText().toString();
                             } else if (CorrectAnswer == 1) {
@@ -158,6 +158,7 @@ public class ChallengeQuestion extends AppCompatActivity {
         intent.putExtra("correctAnswer", CorrectAnswerText);
         intent.putExtra("Question", question.getText().toString());
         intent.putExtra("subj", CurSub);
+        System.out.println("no" + CurSub);
         if (CorrectAnswerText == userSaid) {
             cnt_person += difficulty;
         }
@@ -170,6 +171,8 @@ public class ChallengeQuestion extends AppCompatActivity {
         Intent intent = new Intent(this, ChallEnd.class);
         intent.putExtra("total_diff", cnt_person);
         intent.putExtra("max_diff", max_person);
+        intent.putExtra("subj", CurSub);
+        System.out.println("no" + CurSub);
         startActivity(intent);
     }
 

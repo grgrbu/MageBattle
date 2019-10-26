@@ -19,6 +19,7 @@ public class ChallengeAnswer extends AppCompatActivity {
     private String CurSub;
     private Double total_cnt = 0.0;
     private Double max_cnt = 0.0;
+    private String disc = "";
 
 
     @Override
@@ -39,6 +40,8 @@ public class ChallengeAnswer extends AppCompatActivity {
         total_cnt = intent.getDoubleExtra("total_diff", 0.0);
         max_cnt = intent.getDoubleExtra("max_diff", 0.0);
         CurSub = current_subject;
+        System.out.println("noo" + CurSub);
+        disc = intent.getStringExtra("discipline");;
 
         QuestionTop.setText(Question);
         if (QuestionTop.getText().length() > 20) {
@@ -72,8 +75,10 @@ public class ChallengeAnswer extends AppCompatActivity {
     public void nextQuestion() {
         Intent intent = new Intent(this, ChallengeQuestion.class);
         intent.putExtra("resent", CurSub);
+        intent.putExtra("subj", CurSub);
         intent.putExtra("total_diff", total_cnt);
         intent.putExtra("max_diff", max_cnt);
+        intent.putExtra("discipline", disc);
         startActivity(intent);
     }
 }
