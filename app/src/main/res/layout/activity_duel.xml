@@ -14,9 +14,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#8C41D3EA"
         android:orientation="vertical"
-        android:paddingHorizontal="20dp"
+        android:paddingVertical="5dp"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="24dp">
 
@@ -24,13 +23,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
+            android:background="@layout/activity_main_button"
+            android:paddingHorizontal="20px"
+            android:layout_marginBottom="5dp"
             app:layout_constraintTop_toTopOf="parent">
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="160dp"
                 android:layout_height="match_parent"
-                android:layout_marginRight="20px"
+                android:layout_margin="20dp"
+                android:background="@layout/activity_main_button"
                 android:orientation="vertical"
+                android:paddingHorizontal="10dp"
+                android:paddingTop="20dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
@@ -41,7 +46,7 @@
                     android:text='Your opponent:'
                     android:textAlignment="center"
                     android:textColor="#FFFFFF"
-                    android:textSize="25sp"
+                    android:textSize="20sp"
                     android:textStyle="bold"
 
                     />
@@ -63,11 +68,11 @@
                         android:textStyle="bold" />
 
                     <TextView
+                        android:id="@+id/Defence_opponent_player"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="5dp"
                         android:text="57"
-                        android:id = "@+id/Defence_opponent_player"
                         android:textColor="#FFFFFF"
                         android:textSize="15sp"
                         android:textStyle="bold" />
@@ -89,11 +94,11 @@
                         android:textStyle="bold" />
 
                     <TextView
+                        android:id="@+id/HP_opponent_player"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="22dp"
                         android:text="57"
-                        android:id = "@+id/HP_opponent_player"
                         android:textColor="#FFFFFF"
                         android:textSize="15sp"
                         android:textStyle="bold" />
@@ -103,7 +108,7 @@
             <ImageView
                 android:layout_width="150dp"
                 android:layout_height="200dp"
-                android:layout_marginLeft="20px"
+                android:layout_marginLeft="20dp"
                 android:src="@drawable/aaaaa" />
 
         </LinearLayout>
@@ -111,6 +116,9 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@layout/activity_main_button"
+            android:paddingHorizontal="20px"
+            android:layout_marginTop="5dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
@@ -121,10 +129,13 @@
                 android:src="@drawable/aaaaa" />
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="160dp"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="20dp"
+                android:layout_margin="20dp"
+                android:background="@layout/activity_main_button"
                 android:orientation="vertical"
+                android:paddingHorizontal="10dp"
+                android:paddingTop="20dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
@@ -135,7 +146,7 @@
                     android:text='You:'
                     android:textAlignment="center"
                     android:textColor="#FFFFFF"
-                    android:textSize="25sp"
+                    android:textSize="20sp"
                     android:textStyle="bold"
 
                     />
@@ -202,16 +213,16 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="404dp"
-        android:background="#7C7C7C"
+        android:layout_marginTop="420dp"
+        android:background="@layout/activity_main_button"
         android:paddingHorizontal="20dp"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="32dp">
+        tools:layout_editor_absoluteX="30dp">
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="5dp"
             android:layout_marginRight="6dp"
             android:orientation="vertical"
             app:layout_constraintStart_toStartOf="parent"
@@ -227,10 +238,10 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
+                android:id="@+id/earthRune"
                 android:layout_width="75dp"
                 android:layout_height="20dp"
                 android:text="aaaaa"
-                android:id="@+id/earthRune"
                 android:textAlignment="center"
                 android:textColor="#FFFFFF"
                 android:textStyle="bold" />
@@ -240,7 +251,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginLeft="6dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="5dp"
             android:layout_marginRight="6dp"
             android:orientation="vertical"
             app:layout_constraintStart_toStartOf="parent"
@@ -256,10 +267,10 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
+                android:id="@+id/fireRune"
                 android:layout_width="75dp"
                 android:layout_height="20dp"
                 android:text="aaaaa"
-                android:id="@+id/fireRune"
                 android:textAlignment="center"
                 android:textColor="#FFFFFF"
                 android:textStyle="bold" />
@@ -269,7 +280,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginLeft="6dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="5dp"
             android:layout_marginRight="6dp"
             android:orientation="vertical"
             app:layout_constraintStart_toStartOf="parent"
@@ -285,10 +296,10 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
+                android:id="@+id/airRune"
                 android:layout_width="75dp"
                 android:layout_height="20dp"
                 android:text="aaaaa"
-                android:id="@+id/airRune"
                 android:textAlignment="center"
                 android:textColor="#FFFFFF"
                 android:textStyle="bold" />
@@ -299,7 +310,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginLeft="6dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="5dp"
             android:orientation="vertical"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -314,10 +325,10 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
+                android:id="@+id/waterRune"
                 android:layout_width="75dp"
                 android:layout_height="20dp"
                 android:text="aaaaa"
-                android:id="@+id/waterRune"
                 android:textAlignment="center"
                 android:textColor="#FFFFFF"
                 android:textStyle="bold" />
