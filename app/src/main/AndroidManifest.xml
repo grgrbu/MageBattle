@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.mage_battle">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".DuelLose"></activity>
+        <activity android:name=".DuelWin" />
+        <activity android:name=".DuelWaiting" />
+        <activity android:name=".MainButton" />
+        <activity android:name=".Buttons" />
+        <activity android:name=".Duel" />
+        <activity android:name=".ChallEnd" />
+        <activity
+            android:name=".ui.login.END"
+            android:label="@string/title_activity_end" />
+        <activity
+            android:name=".ui.login.ENDOFEVERYTHING"
+            android:label="@string/title_activity_endofeverything" />
+        <activity android:name=".ChallengeAnswer" />
+        <activity android:name=".ChallengeQuestion" />
+        <activity android:name=".QuInChallenge" />
+        <activity android:name=".QuestionInChallenge" />
+        <activity android:name=".Challenge" />
+        <activity android:name=".FinishActivity" />
+        <activity android:name=".Answer" />
+        <activity android:name=".Question" />
+        <activity android:name=".PractiseActivity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
