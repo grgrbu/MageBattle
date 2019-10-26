@@ -32,7 +32,11 @@ public class ChallengeQuestion extends AppCompatActivity {
     private Integer CorrectAnswer = 0;
     private String CorrectAnswerText = "";
     private String CurSub = "";
-    private Integer count = 0;
+
+    private Double cnt_person = 0.0;
+    private Double max_person = 0.0;
+    private Double difficulty = 0.0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +44,8 @@ public class ChallengeQuestion extends AppCompatActivity {
 
         Intent intent = getIntent();
         final String subject = intent.getStringExtra("resent");
+        cnt_person = intent.getDoubleExtra("total_diff", 0.0);
+        max_person = intent.getDoubleExtra("max_diff", 0.0);
         CurSub = subject;
 
         System.out.println(subject);
@@ -89,6 +95,7 @@ public class ChallengeQuestion extends AppCompatActivity {
                             third.setText(response.getString("answer2"));
                             fourth.setText(response.getString("answer3"));
                             CorrectAnswer = response.getInt("correct");
+                            difficulty = response.getDouble("difficulty");
                             if (CorrectAnswer == 0) {
                                 CorrectAnswerText = first.getText().toString();
                             } else if (CorrectAnswer == 1) {
@@ -151,10 +158,18 @@ public class ChallengeQuestion extends AppCompatActivity {
         intent.putExtra("correctAnswer", CorrectAnswerText);
         intent.putExtra("Question", question.getText().toString());
         intent.putExtra("subj", CurSub);
+        if (CorrectAnswerText == userSaid) {
+            cnt_person += difficulty;
+        }
+        max_person += difficulty;
+        intent.putExtra("total_diff", cnt_person);
+        intent.putExtra("max_diff", max_person);
         startActivity(intent);
     }
     public void openChallEnd() {
         Intent intent = new Intent(this, ChallEnd.class);
+        intent.putExtra("total_diff", cnt_person);
+        intent.putExtra("max_diff", max_person);
         startActivity(intent);
     }
 
