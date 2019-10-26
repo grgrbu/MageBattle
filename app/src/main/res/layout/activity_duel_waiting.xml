@@ -12,11 +12,11 @@
     android:background="#444444">
 
     <LinearLayout
-        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:paddingVertical="5dp"
+        android:id="@+id/linearLayout"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="24dp">
 
@@ -24,19 +24,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
             android:background="@layout/activity_main_button"
             android:paddingHorizontal="20px"
-            android:layout_marginBottom="5dp">
+            android:layout_marginBottom="5dp"
+            app:layout_constraintTop_toTopOf="parent">
 
             <LinearLayout
                 android:layout_width="160dp"
                 android:layout_height="match_parent"
-                android:layout_marginRight="20dp"
+                android:layout_margin="20dp"
                 android:background="@layout/activity_main_button"
+                android:orientation="vertical"
                 android:paddingHorizontal="10dp"
                 android:paddingTop="20dp"
-                android:orientation="vertical"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
@@ -117,11 +117,11 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
             android:background="@layout/activity_main_button"
             android:paddingHorizontal="20px"
-            android:layout_marginTop="5dp">
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
                 android:layout_width="150dp"
@@ -132,7 +132,7 @@
             <LinearLayout
                 android:layout_width="160dp"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="20dp"
+                android:layout_margin="20dp"
                 android:background="@layout/activity_main_button"
                 android:orientation="vertical"
                 android:paddingHorizontal="10dp"
@@ -169,11 +169,11 @@
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/Defence_your_player2"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="5dp"
                         android:text="57"
+                        android:id = "@+id/Defence_your_player2"
                         android:textColor="#FFFFFF"
                         android:textSize="15sp"
                         android:textStyle="bold" />
@@ -195,11 +195,11 @@
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/HP_your_player2"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="22dp"
                         android:text="57"
+                        android:id = "@+id/HP_your_player2"
                         android:textColor="#FFFFFF"
                         android:textSize="15sp"
                         android:textStyle="bold" />
