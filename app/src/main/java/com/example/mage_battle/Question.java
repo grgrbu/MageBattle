@@ -76,7 +76,7 @@ public class Question extends AppCompatActivity {
 //                        results.setText(response.toString());
                             System.out.println(response.toString());
                             question.setText(response.getString("question"));
-                            if (question.getText().length() > 20) {
+                            if (question.getText().length() >= 17) {
                                 question.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 20);
                             }
                             first.setText(response.getString("answer0"));

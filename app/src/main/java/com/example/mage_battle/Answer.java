@@ -37,7 +37,7 @@ public class Answer extends AppCompatActivity {
         CurSub = current_subject;
 
         QuestionTop.setText(Question);
-        if (QuestionTop.getText().length() > 20) {
+        if (QuestionTop.getText().length() >= 17) {
             QuestionTop.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 20);
         }
         UserAnswerTop.setText(UserAnswerTop.getText().toString() + UserAnswer);
